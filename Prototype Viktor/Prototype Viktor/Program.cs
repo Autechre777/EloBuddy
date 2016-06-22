@@ -227,8 +227,8 @@ namespace Protype_Viktor
             Drawing.OnDraw += Drawing_OnDraw;
 
 
-            Chat.Print("Prototype Viktor " + version + " Loaded!");
-            Console.WriteLine("Prototype Viktor " + version + " Loaded!");
+            Chat.Print("Autechre777 Prototype Viktor " + version + " Loaded!");
+            Console.WriteLine("Autechre777 Prototype Viktor " + version + " Loaded!");
 
         }
 
@@ -283,7 +283,7 @@ namespace Protype_Viktor
             W.AllowedCollisionCount = int.MaxValue;
             E = new Spell.Skillshot(SpellSlot.E, 525, SkillShotType.Linear, 250, int.MaxValue, 100);
             E.AllowedCollisionCount = int.MaxValue;
-            R = new Spell.Skillshot(SpellSlot.R, 700, SkillShotType.Circular, 250, int.MaxValue, 450);
+            R = new Spell.Skillshot(SpellSlot.R, 860, SkillShotType.Circular, 250, int.MaxValue, 450);
             R.AllowedCollisionCount = int.MaxValue;
         }
         #endregion
@@ -403,7 +403,7 @@ namespace Protype_Viktor
         private static void ComboWQER()
         {
             if (Q.IsReady() && _ViktorQ) CastQ();
-            if (E.IsReady() && _ViktorE) Core.DelayAction(CastE, 50);
+            if (E.IsReady() && _ViktorE) CastE();
             if (R.IsReady() && _ViktorR) CastR();
             if (W.IsReady() && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
@@ -415,7 +415,7 @@ namespace Protype_Viktor
         private static void ComboWREQ()
         {
             if (R.IsReady() && _ViktorR) CastR();
-            if (E.IsReady() && _ViktorE) Core.DelayAction(CastE, 50);
+            if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
             if (W.IsReady() && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
