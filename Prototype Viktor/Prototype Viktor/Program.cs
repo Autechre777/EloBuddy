@@ -402,10 +402,10 @@ namespace Protype_Viktor
 
         private static void ComboWQER()
         {
-            if (W.IsReady() && _ViktorW) CastW();
             if (Q.IsReady() && _ViktorQ) CastQ();
             if (E.IsReady() && _ViktorE) Core.DelayAction(CastE, 50);
             if (R.IsReady() && _ViktorR) CastR();
+            if (W.IsReady() && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
 
 
@@ -414,10 +414,10 @@ namespace Protype_Viktor
 
         private static void ComboWREQ()
         {
-            if (W.IsReady() && _ViktorW) CastW();
             if (R.IsReady() && _ViktorR) CastR();
             if (E.IsReady() && _ViktorE) Core.DelayAction(CastE, 50);
             if (Q.IsReady() && _ViktorQ) CastQ();
+            if (W.IsReady() && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
         }
 
