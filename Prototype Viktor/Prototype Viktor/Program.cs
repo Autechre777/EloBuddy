@@ -417,7 +417,7 @@ namespace Protype_Viktor
             if (R.IsReady() && _ViktorR) CastR();
             if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
-            if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff(ViktorPowerTransferReturn) && _ViktorW) CastW();
+            if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !target.HasBuff(ViktorPowerTransferReturn) && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
         }
 
