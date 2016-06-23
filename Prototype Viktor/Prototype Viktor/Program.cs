@@ -190,11 +190,6 @@ namespace Protype_Viktor
         
         
         #region Events
-        
-        private static void Loading_OnLoadingComplete(EventArgs args)
-        {
-        }
-        
         private static void Loading_OnLoadingComplete(EventArgs args)
         {
             if (_Player.ChampionName != "Viktor") return;
