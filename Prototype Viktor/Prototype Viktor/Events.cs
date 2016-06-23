@@ -11,7 +11,30 @@ namespace Protype_Viktor
 {
     public static class Events
     {
+        static Events()
+        {
+            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
+        }
 
+        public static void Initialize()
+        {
+            
+        }
+
+        private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
+        {
+            var a = target as Obj_AI_Minion;
+
+            if (a == null)
+            {
+                return;
+            }
+
+            if (a != null)
+            {
+                args.Process = false;
+            }
+        }
         
 
         
