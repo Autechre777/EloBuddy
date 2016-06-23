@@ -244,6 +244,7 @@ namespace Protype_Viktor
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass)) 
             {
                 args.Process = false;
+                Circle.Draw(Color.Gray, R.Range, _Player.Position);
             }
         }
         
