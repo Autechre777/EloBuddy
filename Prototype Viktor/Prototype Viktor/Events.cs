@@ -32,7 +32,7 @@ namespace Protype_Viktor
                 return;
             }
 
-            if (a !== null)
+            if (a != null)
             {
                 args.Process = false;
             }
