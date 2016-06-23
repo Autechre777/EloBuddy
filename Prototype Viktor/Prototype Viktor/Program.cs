@@ -17,7 +17,7 @@ namespace Protype_Viktor
     {
          static Events()
         {
-       
+            1=1;
         }
 
     }
