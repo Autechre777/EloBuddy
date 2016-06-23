@@ -202,6 +202,7 @@ namespace Protype_Viktor
 
             LoadSkills();
             LoadMenu();
+            Events.Initialize();
 
             for (int i = 0; i < DangerousEnemies.Count; i++)
             {
