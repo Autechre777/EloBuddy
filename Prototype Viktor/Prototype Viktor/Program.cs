@@ -417,8 +417,13 @@ namespace Protype_Viktor
             if (R.IsReady() && _ViktorR) CastR();
             if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
+            if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
             if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
+            if (R.IsReady() && _ViktorR) CastR(); // Make sure shit casts on time
+            if (Q.IsReady() && _ViktorQ) CastQ(); // Make sure shit casts on time
+            if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
+            
         }
 
 
