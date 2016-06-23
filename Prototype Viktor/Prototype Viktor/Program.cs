@@ -16,14 +16,6 @@ namespace Protype_Viktor
     public static class Events
     {
 
-
-        static Events()
-        {
-            Interrupter.OnInterruptableSpell += Interrupter_OnInterruptableSpell;
-            Gapcloser.OnGapcloser += OnGapCloser;
-            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
-            Drawing.OnDraw += OnDraw;
-        }
     }
     class Program
     {
