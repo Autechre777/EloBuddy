@@ -13,7 +13,7 @@ using Prototype_Viktor;
 
 namespace Protype_Viktor
 {
-    class Program
+    public static class Program
     {
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
