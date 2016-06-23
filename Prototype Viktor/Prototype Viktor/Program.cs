@@ -231,7 +231,7 @@ namespace Protype_Viktor
             Console.WriteLine("Autechre777 Prototype Viktor " + version + " Loaded!");
 
         }
-
+/*
          private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
             var a = target as Obj_AI_Minion;
@@ -247,7 +247,7 @@ namespace Protype_Viktor
                 Circle.Draw(Color.Gray, R.Range, _Player.Position);
             }
         }
-        
+ */       
         private static void Game_OnTick(EventArgs args)
         {
             if (_Player.IsDead || _Player.HasBuff("Recall")) return;
@@ -435,7 +435,7 @@ namespace Protype_Viktor
             if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
             if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
-            if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
+            if (W.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
             if (R.IsReady() && _ViktorR) CastR(); // Make sure shit casts on time
             if (Q.IsReady() && _ViktorQ) CastQ(); // Make sure shit casts on time
@@ -452,7 +452,7 @@ namespace Protype_Viktor
             if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
             if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
-            if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
+            if (W.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
             if (R.IsReady() && _ViktorR) CastR(); // Make sure shit casts on time
             if (Q.IsReady() && _ViktorQ) CastQ(); // Make sure shit casts on time
