@@ -417,6 +417,7 @@ namespace Protype_Viktor
             if (R.IsReady() && _ViktorR) CastR();
             if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
+            if (Player.HasBuff("ViktorPowerTransferReturn") && !Q.IsReady()) Orbwalker.ResetAutoAttack(); //reset aa if you have empowered aa and q is on cd
             if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
             if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
             if (bIgnite && _UseIgnite) UseIgnite();
@@ -430,10 +431,11 @@ namespace Protype_Viktor
         private static void Harass()
         {
             if (_HarassMana <= _Player.ManaPercent)
-            {
+            { //start
+                
                 if (E.IsReady() && _HarassE) CastE();
                 if (Q.IsReady() && _HarassQ) Core.DelayAction(CastQ, 50);
-            }
+            } //end
         }
 
         private static void LaneClear()
