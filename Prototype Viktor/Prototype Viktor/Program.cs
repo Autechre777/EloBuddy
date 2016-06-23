@@ -193,7 +193,6 @@ namespace Protype_Viktor
         
         private static void Loading_OnLoadingComplete(EventArgs args)
         {
-            if (_Player.ChampionName != "Viktor") return;
         }
         
         private static void Loading_OnLoadingComplete(EventArgs args)
