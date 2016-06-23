@@ -204,6 +204,7 @@ namespace Protype_Viktor
             }
             LoadSkills();
             LoadMenu();
+            Events.Initialize();
             Chat.Print("66666666666666666" + version + " 66666666666666666");
 
             for (int i = 0; i < DangerousEnemies.Count; i++)
