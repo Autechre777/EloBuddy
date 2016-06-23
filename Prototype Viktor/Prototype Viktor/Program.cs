@@ -16,7 +16,6 @@ namespace Protype_Viktor
     class Program
     {
         #region Variables
-        Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
         private static List<string> DangerousEnemies = new List<string>() { "Amumu", "Lissandra", "Thresh", "Blitzcrank", "MissFortune" };
         private static Spell.Targeted Q, Ignite;
@@ -231,6 +230,11 @@ namespace Protype_Viktor
             Chat.Print("Autechre777 Prototype Viktor " + version + " Loaded!");
             Console.WriteLine("Autechre777 Prototype Viktor " + version + " Loaded!");
 
+        }
+        
+        static Events()
+        {
+            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
         }
         
          private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
