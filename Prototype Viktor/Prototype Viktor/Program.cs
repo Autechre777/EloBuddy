@@ -231,6 +231,27 @@ namespace Protype_Viktor
             Console.WriteLine("Autechre777 Prototype Viktor " + version + " Loaded!");
 
         }
+        
+         private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
+        {
+            var a = target as Obj_AI_Minion;
+            var allys = EntityManager.Heroes.Allies.Count(c => Player.Instance.Distance(c) <= Player.Instance.AttackRange);
+
+            if (a == null)
+            {
+                return;
+            }
+
+            if (allys > 1)
+            {
+                return;
+            }
+
+            if (!R.IsReady())
+            {
+                args.Process = false;
+            }
+        }
 /*
          private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
@@ -458,14 +479,6 @@ namespace Protype_Viktor
             if (Q.IsReady() && _ViktorQ) CastQ(); // Make sure shit casts on time
             if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
             
-        }
-
-        private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
-        {
-                if (args.Target.Type == GameObjectType.obj_AI_Minion)
-                {
-                        args.Process = false;
-                }
         }
 
         private static void Harass()
