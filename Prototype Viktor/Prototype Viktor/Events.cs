@@ -7,7 +7,7 @@ using EloBuddy.SDK.Events;
 using EloBuddy.SDK.Rendering;
 using SharpDX;
 
-namespace Prtype_Viktor
+namespace Prototype_Viktor
 {
     public static class Events
     {
