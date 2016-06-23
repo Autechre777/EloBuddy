@@ -15,7 +15,7 @@ namespace Protype_Viktor
 {
     class Program
     {
-        public static void Init(EventArgs args)
+        public static void Custom(EventArgs args)
         {
             if (_Player.BaseSkinName.ToLower() != "rengar") return;
             Spells.SetSpells();
