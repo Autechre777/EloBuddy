@@ -194,7 +194,6 @@ namespace Protype_Viktor
         private static void Loading_OnLoadingComplete(EventArgs args)
         {
             if (_Player.ChampionName != "Viktor") return;
-            Chat.Print("Events Script Loaded!");
         }
         
         private static void Loading_OnLoadingComplete(EventArgs args)
