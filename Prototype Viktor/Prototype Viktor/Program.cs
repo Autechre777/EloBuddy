@@ -10,11 +10,10 @@ using EloBuddy.SDK.Menu;
 using EloBuddy.SDK.Menu.Values;
 using EloBuddy.SDK.Rendering;
 using Prototype_Viktor;
-using Protype_Viktor;
 
 namespace Protype_Viktor
 {
-    public static class Program
+        class Program
     {
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
@@ -204,8 +203,6 @@ namespace Protype_Viktor
             }
             LoadSkills();
             LoadMenu();
-            Events.Initialize();
-            Chat.Print("66666666666666666" + version + " 66666666666666666");
 
             for (int i = 0; i < DangerousEnemies.Count; i++)
             {
