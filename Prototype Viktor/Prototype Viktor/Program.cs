@@ -31,12 +31,6 @@ namespace Protype_Viktor
         #endregion
 
         #region PropertyChecks
-        
-        static Events()
-        {
-            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
-        }
-        
         private static bool _ViktorQ
         {
             get { return ViktorComboMenu["UseQ"].Cast<CheckBox>().CurrentValue; }
