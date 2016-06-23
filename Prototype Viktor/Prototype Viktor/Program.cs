@@ -194,7 +194,7 @@ namespace Protype_Viktor
         {
             if (_Player.ChampionName != "Viktor") return;
             
-            Events.Initialize();
+            Laser.Initialize();
 
             IgniteSlot = _Player.GetSpellSlotFromName("summonerdot");
             if (IgniteSlot != SpellSlot.Unknown)
