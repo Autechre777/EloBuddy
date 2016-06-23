@@ -15,6 +15,10 @@ namespace Protype_Viktor
 {
     public static class Events
     {
+         static Events()
+        {
+
+        }
 
     }
     class Program
