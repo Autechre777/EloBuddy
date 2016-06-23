@@ -15,21 +15,6 @@ namespace Protype_Viktor
 {
     class Program
     {
-        public static void Custom(EventArgs args)
-        {
-            if (_Player.BaseSkinName.ToLower() != "rengar") return;
-            Spells.SetSpells();
-            Items.setItems();
-            MenuX.getMenu();
-            Chat.Print("Rengod Loaded", Color.Purple);
-            Game.OnTick += OnTick;
-            Orbwalker.OnPostAttack += OnAfterAttack;
-            Orbwalker.OnPreAttack += OnBeforeAttack;
-            Obj_AI_Base.OnProcessSpellCast += OnProcessSpellCast;
-            Dash.OnDash += OnDash;
-            Drawing.OnDraw += Drawings.OnDraw;
-            _Player.SetSkinId(MenuX.SkinHax.CurrentValue);
-        }
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
         private static List<string> DangerousEnemies = new List<string>() { "Amumu", "Lissandra", "Thresh", "Blitzcrank", "MissFortune" };
