@@ -10,6 +10,7 @@ using EloBuddy.SDK.Menu;
 using EloBuddy.SDK.Menu.Values;
 using EloBuddy.SDK.Rendering;
 using Prototype_Viktor;
+using Prototy;
 
 namespace Protype_Viktor
 {
