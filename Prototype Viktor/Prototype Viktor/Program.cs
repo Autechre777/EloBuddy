@@ -13,16 +13,12 @@ using Prototype_Viktor;
 
 namespace Protype_Viktor
 {
-    public static class Events
-    {
-         static Events()
-        {
-            1=1;
-        }
-
-    }
     class Program
     {
+        static Events()
+        {
+
+        }
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
         private static List<string> DangerousEnemies = new List<string>() { "Amumu", "Lissandra", "Thresh", "Blitzcrank", "MissFortune" };
