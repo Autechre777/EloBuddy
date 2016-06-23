@@ -11,6 +11,7 @@ namespace Protype_Viktor
 {
     public static class Events
     {
+        Chat.Print("66666666666666666" + version + " 66666666666666666");
 
 
         static Events()
