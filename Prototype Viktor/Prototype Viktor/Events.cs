@@ -15,10 +15,7 @@ namespace MinionAA
 
         static Events()
         {
-            Interrupter.OnInterruptableSpell += Interrupter_OnInterruptableSpell;
-            Gapcloser.OnGapcloser += OnGapCloser;
             Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
-            Drawing.OnDraw += OnDraw;
         }
 
         public static void Initialize()
