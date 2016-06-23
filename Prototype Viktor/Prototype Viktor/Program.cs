@@ -258,8 +258,9 @@ namespace Protype_Viktor
 
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Combo))
             {
-                if (_ComboMode == 1) ComboWREQ();
-                else ComboWQER();   
+                if (_ComboMode == 0) ComboQERW();
+                if (_ComboMode == 1) ComboREQW();
+                if (_ComboMode == 2) ComboREQW2();
             }
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.LaneClear)) LaneClearBeta();
             if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass)) Harass();
@@ -332,7 +333,7 @@ namespace Protype_Viktor
             ViktorComboMenu.Add("UseE", new CheckBox("Use E"));
             ViktorComboMenu.Add("UseR", new CheckBox("Use R"));
             ViktorComboMenu.Add("UseIgnite", new CheckBox("Use Ignite", false));
-            ViktorComboMenu.Add("ComboMode", new ComboBox("Combo Mode", 1, "WQER (Old)", "WREQ (New)"));
+            ViktorComboMenu.Add("ComboMode", new ComboBox("Combo Mode", 2, "QERW (Old)", "REQW (New)", "REQW(LATEGAMEMODE)"));
             ViktorComboMenu.Add("FollowR", new CheckBox("Auto Follow R (Only Enemy)"));
             ViktorComboMenu.Add("FollowRViktor", new CheckBox("Auto Follow R (Enemies&Viktor)", false));
             ViktorComboMenu.Add("CheckR", new CheckBox("Cast R only if enemy is killable with Combo"));
@@ -400,7 +401,7 @@ namespace Protype_Viktor
         }
         #endregion
 
-        private static void ComboWQER()
+        private static void ComboQERW()
         {
             if (Q.IsReady() && _ViktorQ) CastQ();
             if (E.IsReady() && _ViktorE) CastE();
@@ -412,7 +413,23 @@ namespace Protype_Viktor
         }
 
 
-        private static void ComboWREQ()
+        private static void ComboREQW()
+        {
+            if (R.IsReady() && _ViktorR) CastR();
+            if (E.IsReady() && _ViktorE) CastE();
+            if (Q.IsReady() && _ViktorQ) CastQ();
+            if (Player.HasBuff("ViktorPowerTransferReturn") && !Q.IsReady()) Orbwalker.ResetAutoAttack(); //reset aa if you have empowered aa and q is on cd
+            if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
+            if (W.IsReady() && !R.IsReady() && !E.IsReady() && !Q.IsReady() && !Player.HasBuff("ViktorPowerTransferReturn") && _ViktorW) CastW();
+            if (bIgnite && _UseIgnite) UseIgnite();
+            if (R.IsReady() && _ViktorR) CastR(); // Make sure shit casts on time
+            if (Q.IsReady() && _ViktorQ) CastQ(); // Make sure shit casts on time
+            if (E.IsReady() && _ViktorE) CastE(); // Make sure shit casts on time
+            
+        }
+
+        
+        private static void ComboREQW2()
         {
             if (R.IsReady() && _ViktorR) CastR();
             if (E.IsReady() && _ViktorE) CastE();
