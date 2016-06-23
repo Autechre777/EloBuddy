@@ -15,10 +15,6 @@ namespace Protype_Viktor
 {
     class Program
     {
-        static Events()
-        {
-
-        }
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
         private static List<string> DangerousEnemies = new List<string>() { "Amumu", "Lissandra", "Thresh", "Blitzcrank", "MissFortune" };
@@ -33,6 +29,10 @@ namespace Protype_Viktor
         private static Menu ViktorComboMenu, ViktorHarassMenu, ViktorLaneClearMenu, ViktorMiscMenu, ViktorDrawMenu;
         private static readonly string version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         #endregion
+        
+                static Events()
+        {
+        }
 
         #region PropertyChecks
         private static bool _ViktorQ
