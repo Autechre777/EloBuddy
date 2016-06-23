@@ -232,6 +232,21 @@ namespace Protype_Viktor
 
         }
 
+         private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
+        {
+            var a = target as Obj_AI_Minion;
+
+            if (a == null)
+            {
+                return;
+            }
+
+            if (Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass)) 
+            {
+                args.Process = false;
+            }
+        }
+        
         private static void Game_OnTick(EventArgs args)
         {
             if (_Player.IsDead || _Player.HasBuff("Recall")) return;
