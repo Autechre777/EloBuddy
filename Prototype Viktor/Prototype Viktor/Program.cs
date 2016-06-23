@@ -232,6 +232,7 @@ namespace Protype_Viktor
 
         }
         
+         Orbwalker.OnPreAttack += OnBeforeAttack;
          private static void OnBeforeAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
             var a = target as Obj_AI_Minion;
