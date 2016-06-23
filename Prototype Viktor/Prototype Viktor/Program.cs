@@ -16,6 +16,7 @@ namespace Protype_Viktor
     class Program
     {
         #region Variables
+        Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
         private static List<string> DangerousEnemies = new List<string>() { "Amumu", "Lissandra", "Thresh", "Blitzcrank", "MissFortune" };
         private static Spell.Targeted Q, Ignite;
