@@ -16,11 +16,12 @@ namespace Protype_Viktor
         static Events()
         {
             Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
+            Chat.Print("66666666666666666" + version + " 66666666666666666");
         }
 
         public static void Initialize()
         {
-
+        Chat.Print("66666666666666666" + version + " 66666666666666666");
         }
 
         private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
