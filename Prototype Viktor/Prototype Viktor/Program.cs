@@ -17,7 +17,7 @@ namespace Protype_Viktor
     {
          static Events()
         {
-            Gapcloser.OnGapcloser += OnGapCloser;
+       
         }
 
     }
