@@ -193,6 +193,8 @@ namespace Protype_Viktor
         private static void Loading_OnLoadingComplete(EventArgs args)
         {
             if (_Player.ChampionName != "Viktor") return;
+            
+            Events.Initialize();
 
             IgniteSlot = _Player.GetSpellSlotFromName("summonerdot");
             if (IgniteSlot != SpellSlot.Unknown)
