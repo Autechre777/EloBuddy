@@ -201,7 +201,6 @@ namespace Protype_Viktor
                 bIgnite = true;
                 Ignite = new Spell.Targeted(IgniteSlot, 600);
             }
-            Laser.Initialize();            
             LoadSkills();
             LoadMenu();
 
@@ -228,6 +227,7 @@ namespace Protype_Viktor
             Gapcloser.OnGapcloser += Gapcloser_OnGapcloser;
             Obj_AI_Base.OnProcessSpellCast += Obj_AI_Base_OnProcessSpellCast;
             Drawing.OnDraw += Drawing_OnDraw;
+            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
 
 
             Chat.Print("Autechre777 Prototype Viktor " + version + " Loaded!");
