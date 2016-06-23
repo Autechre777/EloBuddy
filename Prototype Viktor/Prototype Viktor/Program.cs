@@ -16,11 +16,7 @@ namespace Protype_Viktor
     class Program
     {
         
-        public static void Init(EventArgs args)
-        {
-            Orbwalker.OnPostAttack += OnAfterAttack;
-            Orbwalker.OnPreAttack += OnBeforeAttack;
-        }
+
         
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
