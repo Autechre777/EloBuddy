@@ -29,12 +29,13 @@ namespace Protype_Viktor
         private static Menu ViktorComboMenu, ViktorHarassMenu, ViktorLaneClearMenu, ViktorMiscMenu, ViktorDrawMenu;
         private static readonly string version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
         #endregion
-        
-                static Events()
-        {
-        }
 
         #region PropertyChecks
+        
+        static Events()
+        {
+        }
+        
         private static bool _ViktorQ
         {
             get { return ViktorComboMenu["UseQ"].Cast<CheckBox>().CurrentValue; }
