@@ -447,9 +447,10 @@ namespace Protype_Viktor
 
         private static void Harass()
         {
+            Orbwalker.DisableAttacking = false;
             if (_HarassMana <= _Player.ManaPercent)
             { //start
-                
+                Orbwalker.DisableAttacking = false;
                 if (E.IsReady() && _HarassE) CastE();
                 if (Q.IsReady() && _HarassQ) Core.DelayAction(CastQ, 50);
             } //end
@@ -457,6 +458,7 @@ namespace Protype_Viktor
 
         private static void LaneClear()
         {
+            Orbwalker.DisableAttacking = false;
             if (_LaneClearMana <= _Player.ManaPercent)
             {
                 var minions = EntityManager.MinionsAndMonsters.Get(EntityManager.MinionsAndMonsters.EntityType.Minion, EntityManager.UnitTeam.Enemy, _Player.Position, EMaxRange, false);
@@ -479,6 +481,7 @@ namespace Protype_Viktor
 
         private static void LaneClearBeta()
         {
+            Orbwalker.DisableAttacking = false;
             if (_LaneClearMana >= _Player.ManaPercent) return;
 
             var minions = EntityManager.MinionsAndMonsters.Get(EntityManager.MinionsAndMonsters.EntityType.Minion, EntityManager.UnitTeam.Enemy, _Player.Position, EMaxRange, false);
@@ -511,6 +514,7 @@ namespace Protype_Viktor
 
         private static void JungleClearEBeta()
         {
+            Orbwalker.DisableAttacking = false;
             if (!E.IsReady()) return;
          
             var startPos = new Vector2(0, 0);
@@ -536,6 +540,7 @@ namespace Protype_Viktor
 
         private static void JungleClearQBeta()
         {
+            Orbwalker.DisableAttacking = false;
             if (!Q.IsReady()) return;
             foreach (
                 var minion in
@@ -549,6 +554,7 @@ namespace Protype_Viktor
 
         public static void QLastHitBeta()
         {
+            Orbwalker.DisableAttacking = false;
             if (!Q.IsReady()) return;
 
             var min = EntityManager.MinionsAndMonsters.GetLaneMinions(EntityManager.UnitTeam.Enemy,
@@ -570,6 +576,7 @@ namespace Protype_Viktor
 
         private static void JungleClear()
         {
+            Orbwalker.DisableAttacking = false;
             var minions = EntityManager.MinionsAndMonsters.Get(EntityManager.MinionsAndMonsters.EntityType.Monster, EntityManager.UnitTeam.Both, _Player.Position, EMaxRange, false);
 
             foreach (var minion in minions)
