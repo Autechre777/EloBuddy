@@ -222,7 +222,6 @@ namespace Protype_Viktor
             };
             */
 
-            Orbwalker.OnPreAttack += OnBeforeAttack;
             Game.OnTick += Game_OnTick;
             Gapcloser.OnGapcloser += Gapcloser_OnGapcloser;
             Obj_AI_Base.OnProcessSpellCast += Obj_AI_Base_OnProcessSpellCast;
