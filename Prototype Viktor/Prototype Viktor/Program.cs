@@ -431,7 +431,7 @@ namespace Protype_Viktor
         private static void ComboREQW2()
         {
             if (!Player.HasBuff("ViktorPowerTransferReturn")) Orbwalker.DisableAttacking = true;
-            if (Player.HasBuff("ViktorPowerTransferReturn")) Orbwalker.EnableAttacking = true;
+            if (Player.HasBuff("ViktorPowerTransferReturn")) Orbwalker.DisableAttacking = false;
             if (R.IsReady() && _ViktorR) CastR();
             if (E.IsReady() && _ViktorE) CastE();
             if (Q.IsReady() && _ViktorQ) CastQ();
