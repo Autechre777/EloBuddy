@@ -466,6 +466,7 @@ namespace Protype_Viktor
         private static void Harass()
         {
             Orbwalker.DisableAttacking = false;
+            Events.Initialize();
             if (_HarassMana <= _Player.ManaPercent)
             { //start
                 Orbwalker.DisableAttacking = false;
