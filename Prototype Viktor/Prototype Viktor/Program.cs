@@ -186,7 +186,6 @@ namespace Protype_Viktor
         static void Main(string[] args)
         {
             Loading.OnLoadingComplete += Loading_OnLoadingComplete;
-                        Events.Initialize();
         }
         
         
