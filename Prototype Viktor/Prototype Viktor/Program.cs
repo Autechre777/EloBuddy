@@ -17,7 +17,7 @@ namespace Protype_Viktor
     {
          static Events()
         {
-            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
+            Gapcloser.OnGapcloser += OnGapCloser;
         }
 
     }
