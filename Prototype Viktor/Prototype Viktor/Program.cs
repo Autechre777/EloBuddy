@@ -16,7 +16,11 @@ namespace Protype_Viktor
     class Program
     {
         
-
+        public static void Init(EventArgs args)
+        {
+            Orbwalker.OnPostAttack += OnAfterAttack;
+            Orbwalker.OnPreAttack += OnBeforeAttack;
+        }
         
         #region Variables
         public static AIHeroClient _Player { get { return ObjectManager.Player; } }
@@ -235,26 +239,7 @@ namespace Protype_Viktor
 
         }
         
-        private static void OnBeforeAttack(AttackableUnit target, EventArgs args)
-        {
-            var a = target as Obj_AI_Minion;
-            var allys = EntityManager.Heroes.Allies.Count(c => Player.Instance.Distance(c) <= Player.Instance.AttackRange);
-
-            if (a == null)
-            {
-                return;
-            }
-
-            if (allys > 1)
-            {
-                return;
-            }
-
-            if (!R.IsReady())
-            {
-                args.Process = false;
-            }
-        }
+        
 /*
          private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
