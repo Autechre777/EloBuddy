@@ -186,6 +186,7 @@ namespace Protype_Viktor
         static void Main(string[] args)
         {
             Loading.OnLoadingComplete += Loading_OnLoadingComplete;
+                        Events.Initialize();
         }
         
         
@@ -203,7 +204,6 @@ namespace Protype_Viktor
             }
             LoadSkills();
             LoadMenu();
-            Events.Initialize();
 
             for (int i = 0; i < DangerousEnemies.Count; i++)
             {
