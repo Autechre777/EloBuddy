@@ -31,6 +31,12 @@ namespace Protype_Viktor
         #endregion
 
         #region PropertyChecks
+        
+        static Events()
+        {
+            Orbwalker.OnPreAttack += Orbwalker_OnPreAttack;
+        }
+        
         private static bool _ViktorQ
         {
             get { return ViktorComboMenu["UseQ"].Cast<CheckBox>().CurrentValue; }
@@ -232,7 +238,7 @@ namespace Protype_Viktor
 
         }
         
-         private static void Orbwalker.OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
+         private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
             var a = target as Obj_AI_Minion;
             var allys = EntityManager.Heroes.Allies.Count(c => Player.Instance.Distance(c) <= Player.Instance.AttackRange);
