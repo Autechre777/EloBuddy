@@ -460,7 +460,7 @@ namespace Protype_Viktor
             
         }
 
-        private static void OnBeforeAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
+        private static void Orbwalker_OnPreAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
                 if (args.Target.Type == GameObjectType.obj_AI_Minion)
                 {
