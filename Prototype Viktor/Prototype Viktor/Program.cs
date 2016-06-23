@@ -462,7 +462,7 @@ namespace Protype_Viktor
 
         private static void OnBeforeAttack(AttackableUnit target, Orbwalker.PreAttackArgs args)
         {
-                if (args.Target.Type == GameObjectType.obj_AI_Minion && Orbwalker.ActiveModesFlags.HasFlag(Orbwalker.ActiveModes.Harass))
+                if (args.Target.Type == GameObjectType.obj_AI_Minion)
                 {
                         args.Process = false;
                 }
